@@ -1,4 +1,4 @@
-# Advanced (Isosec) recruitment test - React (mid-level)
+# Advanced (Isosec) recruitment test - React
 This task is to be undertaken as part of applying for the above position with Advanced, and is designed to demonstrate your abilities in:
 - JavaScript
 - React
