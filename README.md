@@ -20,7 +20,7 @@ TheCocktailDB is a free-to-use API which gives details about popular cocktails. 
 To start with, you should simply display all cocktails that are returned by hitting the following endpoint, which filters for all cocktails containing the word "margarita": [www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita](https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita)
 
 We are interested in a number of things:
-- The quality of your code
+- The quality of your code and whether or not it is production ready
 - How you structure your code / project
 - How you interact with Git(Hub)
 
