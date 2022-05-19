@@ -14,13 +14,19 @@ function App() {
       .then((data) => setCockTailSearch(data))
   }, [letter])
 
+  const changeHandler = (e) => { 
+    const  letter = e.target.value;
+      setLetter(letter);       
+  };
+
   return (
     <>
     <div className='main-container'>
       <form>
         {/* Search bar to enter input */}
         <div className='search-container'>
-          <input type='search' className='search-field' />
+          <input type='search' className='search-field' 
+           onChange={(event) =>changeHandler(event)} />
         </div>
       </form>
     </div>
