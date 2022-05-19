@@ -19,13 +19,17 @@ function App() {
       setLetter(letter);       
   };
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+  }
+
   return (
     <>
     <div className='main-container'>
-      <form>
+      <form onSubmit={(event) => submitHandler(event)}>
         {/* Search bar to enter input */}
         <div className='search-container'>
-          <input type='search' className='search-field' 
+          <input type='search' placeholder='Search Cocktails...' className='search-field' 
            onChange={(event) =>changeHandler(event)} />
         </div>
       </form>

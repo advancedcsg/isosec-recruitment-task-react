@@ -11,7 +11,6 @@
   .main-container  {
     height: 70px;
     width: 400px;
-    background-color: lightblue;
     margin-top: 100px;
     margin-left: 500px;
     padding: 10px;
@@ -26,22 +25,23 @@
   }
 
   .main-card {
-    height: 300px;
-    width: 300px;
+    height: 305px;
+    width: 360px;
     padding: 50px;
     display: inline-block;
     max-width: 100%;
+    text-align: center;
     
   }
   
   .main-ing{
     font-size: 18px;
-    color: yellowgreen;
+    color: palegoldenrod;
     font-style: italic;
   }
   
   .main-title {
     font-size: 12px;;
-    color: red;
+    color:green;
     text-transform: uppercase;
   }
