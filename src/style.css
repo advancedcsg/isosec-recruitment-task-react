@@ -24,3 +24,24 @@
     margin-bottom: 4px;
     text-align: left;
   }
+
+  .main-card {
+    height: 300px;
+    width: 300px;
+    padding: 50px;
+    display: inline-block;
+    max-width: 100%;
+    
+  }
+  
+  .main-ing{
+    font-size: 18px;
+    color: yellowgreen;
+    font-style: italic;
+  }
+  
+  .main-title {
+    font-size: 12px;;
+    color: red;
+    text-transform: uppercase;
+  }
