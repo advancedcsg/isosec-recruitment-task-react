@@ -36,6 +36,7 @@ export default function Home() {
     getCocktail(queryType, param).then((res) => {
       if (res?.data?.drinks?.length > 0) setCocktails(res.data.drinks);
       else setCocktails([]);
+      console.log(res.data.drinks);
       setFilterActive(false);
     });
   }, [queryType, param]);
