@@ -11,8 +11,9 @@ export default function SearchBar({ setCocktailSearched }) {
       <input
         type="text"
         className="border-0 outline-none h-full flex-1"
-        placeholder="Search for a country"
+        placeholder="Search for cocktail"
         onChange={changeHandler}
+        defaultValue="Margarita"
       />
     </div>
   );

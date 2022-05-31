@@ -6,9 +6,9 @@ export default function CocktailCard({ cocktail }) {
 
   return (
     <div
-      className="w-72 overflow-hidden shadow-md rounded bg-white mb-12 sm:mb-18 mx-2 cursor-pointer max-h-max"
+      className="w-72 overflow-hidden shadow-md rounded bg-white mb-12 sm:mb-18 mx-2 cursor-pointer max-h-96"
       onClick={() => {
-        navigate(`/cocktail/${cocktail.idDrink}`);
+        navigate(`/cocktail/${cocktail.strDrink}`);
       }}
     >
       <img

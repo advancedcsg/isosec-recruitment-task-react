@@ -2,13 +2,41 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-export default function Filter({ setFilter }) {
+export default function Filter({ setFilter, filterActive }) {
   const [active, setActive] = useState(false);
+  const [currentFilter, setCurrentFilter] = useState("Filter By Type");
+  const options = [
+    {
+      name: "Alcoholic",
+      filter: "strAlcoholic",
+      value: "Alcoholic",
+    },
+    {
+      name: "Non Alcoholic",
+      filter: "strAlcoholic",
+      value: "Non alcoholic",
+    },
+    {
+      name: "Cocktail",
+      filter: "strCategory",
+      value: "Cocktail",
+    },
+    {
+      name: "Ordinary Drink",
+      filter: "strCategory",
+      value: "Ordinary Drink",
+    },
+    {
+      name: "None",
+      filter: "none",
+      value: "none",
+    },
+  ];
 
   return (
     <div className="relative">
       <div className="flex items-center w-56 justify-between h-14 pl-8 rounded shadow-md mb-1 font-semibold bg-white mb-10 md:mr-2">
-        Filter by Type
+        {filterActive ? currentFilter : "Filter By Type"}
         <FontAwesomeIcon
           icon={faChevronDown}
           className="mr-4 cursor-pointer"
@@ -20,60 +48,19 @@ export default function Filter({ setFilter }) {
       </div>
       {active && (
         <div className="w-56 justify-between  rounded shadow-md text-left font-semibold pl-8 space-y-4 py-4 absolute bg-white top-14 mt-1">
-          <p
-            className="cursor-pointer"
-            onClick={() => {
-              setFilter("a=Alcoholic");
-              setActive(!active);
-            }}
-          >
-            Alcoholic
-          </p>
-          <p
-            className="cursor-pointer"
-            onClick={() => {
-              setFilter("a=Non_Alcoholic");
-              setActive(!active);
-            }}
-          >
-            Non-Alcoholic
-          </p>
-          <p
-            className="cursor-pointer"
-            onClick={() => {
-              setFilter("c=Ordinary_Drink");
-              setActive(!active);
-            }}
-          >
-            Ordinary Drink
-          </p>
-          <p
-            className="cursor-pointer"
-            onClick={() => {
-              setFilter("c=Cocktail");
-              setActive(!active);
-            }}
-          >
-            Cocktail
-          </p>
-          <p
-            className="cursor-pointer"
-            onClick={() => {
-              setFilter("g=Cocktail_glass");
-              setActive(!active);
-            }}
-          >
-            Cocktail Glass
-          </p>
-          <p
-            className="cursor-pointer"
-            onClick={() => {
-              setFilter("g=Champagne_flute");
-              setActive(!active);
-            }}
-          >
-            Champagne Flute
-          </p>
+          {options.map((option) => (
+            <p
+              className="cursor-pointer"
+              onClick={() => {
+                setFilter(option.filter, option.value);
+                setActive(!active);
+                setCurrentFilter(option.name);
+              }}
+              key={option.name}
+            >
+              {option.name}
+            </p>
+          ))}
         </div>
       )}
     </div>
